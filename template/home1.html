@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+
+		
+	<title>sentiment analysis</title>
+	<style type="text/css">
+		.bg-logo{
+			background-image: url(https://images.squarespace-cdn.com/content/v1/53528f90e4b0768cad09d33b/1541186576265-RWK67UCDI04WXSJR5GQO/ke17ZwdGBToddI8pDm48kLHJ70-JWA9dgEOAbI336f17gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0p4XabXLlNWpcJMv7FrN_NK7gC7ng9OtoO5ep7zCz0n67pPMXhJpSCNtoO-H2bRokQ/Artificial_intelligence.jpeg?format=1500w); 
+		}
+		.pad{
+			padding: 20px;
+		}
+	
+	</style>
+</head>
+<body class="bg-logo"> 
+	<p><font color="white">
+<h1>SENTIMENT ANALYSIS</h1><br>
+
+<h3>Enter the text</h3>
+	<form action="/sentiment_analysis_pre" method="post" enctype="multpart/form-data">
+		<input name ="text" class="form-control" placeholder="Text">&nbsp
+		<input type="submit"><br><br>
+	</form>
+	<div class="pad">
+	<h1>Sentiment</h1>
+		{% if probability %}
+		{{ sentiment }}
+		{% endif %}
+	</div>
+	<div class="pad">
+	<h1>Probability</h1>
+	{% if probability %}
+	{{ probability }}
+	{% endif %}
+</div>
+</font>
+</p>
+</body>
+</html>
